@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-<!-- 	-------- TO-DO: ADD META TAG AND NAME HERE -------- -->
+<!-- 	 TO-DO: ADD META TAG AND NAME HERE  -->
 	<meta name="author" content="Vena Ellison">
 	<title>Form Activity Solution File</title>
-<!-- 	-------- TO-DO: ADD LINK TO CSS HERE -------- -->
-	<link rel="stylesheet" href="style.css">
+<!-- 	TO-DO: ADD LINK TO CSS HERE  -->
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<a href="#main-content" id="skipLink">Skip to main content</a>
@@ -28,16 +28,26 @@
 			<h2>Coding Semantic and Accessible Forms!</h2>
 			<p>Today we'll be focusing on coding a form that is accessible and semantic, and we'll also briefly discuss skip links for your website. Forms can be a source of frustration for users, whether they specifically need help with accessing your website or if they just prefer that your forms be easy to use and submit. Follow along as we code this in class, and please ask questions as they arise. Let's make a form!</p>
 
-<!-- 	-------- TO-DO: ADD FORM CODE HERE DURING CLASS, FOLLOW ALONG TO COMPLETE -------- -->
-			<form>
+<!-- 	 TO-DO: ADD FORM CODE HERE DURING CLASS, FOLLOW ALONG TO COMPLETE  -->
+			<form method="post" action="https://wp.zybooks.com/form-viewer.php">
 				<label for="name">Full Name</label>
-				<input type="text" id="name" name="name">
+				<input id="name" type="text" name="name">
 	
 				<label for="email">Email</label>
-				<input type="email" id="email" name="email">
+				<input id="email" type="email" name="email">
 	
 				<label for="tel">Phone</label>
-				<input type="phone" id="phone" name="phone">
+				<input id="tel" type="tel" name="tel">
+
+				<fieldset>
+					<legend>How can we reach you?</legend>
+					
+					<input id="email2" type="radio" name="email2">
+					<label for="email2">Email</label>
+
+					<input id="phone" type="radio" name="phone">
+					<label for="phone">Phone</label>
+				</fieldset>
 
 				<label for="state">State</label>
 				<select id="state" name="state">
@@ -92,6 +102,11 @@
 					<option value="wi">WI</option>
 					<option value="wy">WY</option>
 				</select>
+
+				<label for="message">Message</label>
+				<textarea id="message" name="message"></textarea>
+	
+				<input type="submit" value="Submit">
 			</form>
 		</article>
 	</main>
